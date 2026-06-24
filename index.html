@@ -1,0 +1,249 @@
+HTML
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ÉcoFinitions - Matériaux Sains & Durables</title>
+    <style>
+        /* Variables de couleur */
+        :root {
+            --primary: #2d5a27;
+            --secondary: #8fbc8f;
+            --dark: #2f4f4f;
+            --light: #f4f7f6;
+            --white: #ffffff;
+        }
+
+        /* Styles Généraux */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        body {
+            background-color: var(--light);
+            color: var(--dark);
+            line-height: 1.6;
+        }
+
+        /* Navigation */
+        nav {
+            background-color: var(--white);
+            position: fixed;
+            width: 100%;
+            top: 0;
+            z-index: 1000;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 1rem 5%;
+        }
+
+        nav .logo {
+            font-size: 1.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        nav ul {
+            display: flex;
+            list-style: none;
+        }
+
+        nav ul li {
+            margin-left: 2rem;
+        }
+
+        nav ul li a {
+            text-decoration: none;
+            color: var(--dark);
+            font-weight: 600;
+            transition: color 0.3s;
+        }
+
+        nav ul li a:hover {
+            color: var(--primary);
+        }
+
+        /* Sections */
+        section {
+            padding: 5rem 5% 3rem 5%;
+            min-height: 80vh;
+        }
+
+        /* Hero Section */
+        #accueil {
+            background: linear-gradient(rgba(45, 90, 39, 0.8), rgba(45, 90, 39, 0.6)), url('https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1200&q=80') no-repeat center center/cover;
+            color: var(--white);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            padding-top: 8rem;
+        }
+
+        #accueil h1 {
+            font-size: 3rem;
+            margin-bottom: 1rem;
+        }
+
+        #accueil p {
+            font-size: 1.2rem;
+            max-width: 800px;
+            margin-bottom: 2rem;
+        }
+
+        .btn {
+            background-color: var(--white);
+            color: var(--primary);
+            padding: 0.8rem 2rem;
+            text-decoration: none;
+            font-weight: bold;
+            border-radius: 5px;
+            transition: background 0.3s;
+        }
+
+        .btn:hover {
+            background-color: var(--secondary);
+            color: var(--white);
+        }
+
+        /* Section Titres */
+        section h2 {
+            text-align: center;
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 3rem;
+            position: relative;
+        }
+
+        section h2::after {
+            content: '';
+            display: block;
+            width: 50px;
+            height: 4px;
+            background-color: var(--secondary);
+            margin: 10px auto 0 auto;
+            border-radius: 2px;
+        }
+
+        /* Grilles & Cartes */
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .card {
+            background-color: var(--white);
+            padding: 2rem;
+            border-radius: 8px;
+            box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+            text-align: center;
+            transition: transform 0.3s;
+        }
+
+        .card:hover {
+            transform: translateY(-5px);
+        }
+
+        .card h3 {
+            margin-bottom: 1rem;
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background-color: var(--dark);
+            color: var(--white);
+            text-align: center;
+            padding: 2rem;
+            font-size: 0.9rem;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Barre de Navigation -->
+    <nav>
+        <div class="logo">🌿 ÉcoFinitions</div>
+        <ul>
+            <li><a href="#accueil">Accueil</a></li>
+            <li><a href="#expertises">Nos Expertises</a></li>
+            <li><a href="#materiaux">Matériaux</a></li>
+            <li><a href="#contact">Contact</a></li>
+        </ul>
+    </nav>
+
+    <!-- Accueil (Hero) -->
+    <section id="accueil">
+        <h1>Des Matériaux de Finition Sains pour l'Avenir</h1>
+        <p>Projet collaboratif et open-source visant à concevoir des alternatives biosourcées, sans COV, dédiées à la qualité de l'air dans les espaces sensibles comme les écoles maternelles.</p>
+        <a href="#expertises" class="btn">Découvrir le projet</a>
+    </section>
+
+    <!-- Expertises (Inter-filières) -->
+    <section id="expertises">
+        <h2>Une Approche Multi-Disciplinaire</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Biologie & Environnement</h3>
+                <p>Sélection de composants naturels (caséine, terre de diatomée) pour garantir l'absence totale de toxicité et de COV, tout en assurant un cycle de vie éco-responsable.</p>
+            </div>
+            <div class="card">
+                <h3>Physique des Matériaux</h3>
+                <p>Optimisation des performances mécaniques, de la régulation hygroscopique et de l'isolation acoustique des enduits et composites développés.</p>
+            </div>
+            <div class="card">
+                <h3>Électronique & Capteurs</h3>
+                <p>Intégration de capteurs de COV et d'humidité pour mesurer en temps réel l'impact positif de nos finitions sur l'environnement intérieur.</p>
+            </div>
+            <div class="card">
+                <h3>Data Science / IMDS</h3>
+                <p>Modélisation prédictive des performances des matériaux et traitement des flux de données issus de nos bancs d'essai.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Matériaux innovants -->
+    <section id="materiaux" style="background-color: #ebf2fa;">
+        <h2>Nos Pistes de Recherche</h2>
+        <div class="grid">
+            <div class="card">
+                <h3>Liant Caséine & Cuir</h3>
+                <p>Exploration d'une matrice à base de protéines laitières valorisant des chutes de cuir recyclé pour la texture et la résistance.</p>
+            </div>
+            <div class="card">
+                <h3>Enduits Diatomée</h3>
+                <p>Utilisation de la terre de diatomée pour ses propriétés naturelles de régulation de l'humidité et de captation des polluants.</p>
+            </div>
+            <div class="card">
+                <h3>Revêtements Actifs</h3>
+                <p>Finitions murales capables d'interagir intelligemment avec l'environnement pour assainir l'air ambiant sans chimie lourde.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact / Équipe -->
+    <section id="contact">
+        <h2>Nous Contacter</h2>
+        <div style="max-width: 600px; margin: 0 auto; text-align: center;">
+            <p>Vous êtes une collectivité, un professionnel du bâtiment ou un chercheur intéressé par notre démarche open-source ?</p>
+            <p style="margin-top: 1.5rem; font-weight: bold; color: var(--primary); font-size: 1.2rem;">Projet Inter-Filières Éco-Matériaux</p>
+            <p>Polytech Clermont</p>
+        </div>
+    </section>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 - Projet Innovant Matériaux Sains. Développé en synergie inter-filières.</p>
+    </footer>
+
+</body>
+</html>

@@ -1,10 +1,11 @@
-HTML
 <!DOCTYPE html>
 <html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ÉcoFinitions - Matériaux Sains & Durables</title>
+    <title>EnduitVert - Matériaux Sains & Durables</title>
+    <link rel="icon" type="image/png" href="Capture_d_ecran_2026-06-25_152813-removebg-preview.png">
+    
     <style>
         /* Variables de couleur */
         :root {
@@ -40,10 +41,25 @@ HTML
             display: flex;
             justify-content: space-between;
             align-items: center;
-            padding: 1rem 5%;
+            padding: 0.5rem 5%; /* Ajusté légèrement pour le logo */
         }
 
-        nav .logo {
+        /* Style spécifique pour le conteneur du logo */
+        nav .logo-container {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+            gap: 10px;
+        }
+
+        nav .logo-img {
+            height: 45px; /* Hauteur idéale pour la navbar */
+            width: auto;
+            display: block;
+            object-fit: contain;
+        }
+
+        nav .logo-text {
             font-size: 1.5rem;
             font-weight: bold;
             color: var(--primary);
@@ -170,9 +186,11 @@ HTML
 </head>
 <body>
 
-    <!-- Barre de Navigation -->
     <nav>
-        <div class="logo">🌿 EnduitVert</div>
+        <a href="#accueil" class="logo-container">
+            <img src="Capture_d_ecran_2026-06-25_152813-removebg-preview.png" alt="Logo EnduitVert" class="logo-img">
+            <span class="logo-text">EnduitVert</span>
+        </a>
         <ul>
             <li><a href="#accueil">Accueil</a></li>
             <li><a href="#expertises">Nos Expertises</a></li>
@@ -182,14 +200,12 @@ HTML
         </ul>
     </nav>
 
-    <!-- Accueil (Hero) -->
     <section id="accueil">
         <h1>EnduitVert</h1>
         <p>Projet collaboratif et open-source visant à concevoir des alternatives biosourcées, sans COV, dédiées à la qualité de l'air dans les espaces sensibles comme les écoles maternelles.</p>
         <a href="#expertises" class="btn">Découvrir le projet</a>
     </section>
 
-    <!-- Expertises (Inter-filières) -->
     <section id="expertises">
         <h2>Une Approche Multi-Disciplinaire</h2>
         <div class="grid">
@@ -212,7 +228,6 @@ HTML
         </div>
     </section>
 
-    <!-- Matériaux innovants -->
     <section id="materiaux" style="background-color: #ebf2fa;">
         <h2>Nos Pistes de Recherche</h2>
         <div class="grid">
@@ -231,8 +246,7 @@ HTML
         </div>
     </section>
 
-    <!-- Section Tarifs et Spécifications -->
-   <section id="tarifs" style="background-color: #ffffff;">
+    <section id="tarifs" style="background-color: #ffffff;">
         <h2>Estimation des Coûts & Rendements</h2>
         <p style="text-align: center; max-width: 700px; margin: -1.5rem auto 2rem auto; color: #555;">
             Dans une démarche open-source et éco-responsable, voici l'estimation du coût des matières premières au mètre carré pour notre composite innovant.
@@ -260,7 +274,6 @@ HTML
         </div>
     </section>
 
-    <!-- Contact / Équipe -->
     <section id="contact">
         <h2>Nous Contacter</h2>
         <div style="max-width: 600px; margin: 0 auto; text-align: center;">
@@ -270,7 +283,6 @@ HTML
         </div>
     </section>
 
-    <!-- Pied de page -->
     <footer>
         <p>&copy; 2026 - Projet Innovant Matériaux Sains.</p>
     </footer>
